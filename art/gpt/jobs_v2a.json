@@ -1,0 +1,67 @@
+[
+ [
+  "krell_sheet",
+  "Original 2D fighting game character sprite sheet in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, The Last Blade): hand-drawn pixel-art look, strong dark outlines, cel shading with 4-5 tones per material, dynamic anatomy. Show 8 full-body poses of the SAME character facing RIGHT, evenly spaced in a 4x2 grid, same scale, same palette, each pose fully inside its cell with space between poses: fighting stance, walk, crouch, jump, light punch, heavy punch extended, high kick, special move with glowing energy. Flat solid pure magenta (#FF00FF) background, no shadows on the background, no text, no borders. Character: KRELL, a cyborg alien bounty hunter, tall and lean, gunmetal grey and cobalt blue armor plates, his right arm replaced by a heavy plasma cannon with a glowing orange core, cracked helmet visor with a single glowing red eye, small jetpack thrusters on the back, tattered brown scarf, confident gunslinger stance, special move: orange plasma blast from the arm cannon.",
+  "1536x1024"
+ ],
+ [
+  "nyxa_sheet",
+  "Original 2D fighting game character sprite sheet in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, The Last Blade): hand-drawn pixel-art look, strong dark outlines, cel shading with 4-5 tones per material, dynamic anatomy. Show 8 full-body poses of the SAME character facing RIGHT, evenly spaced in a 4x2 grid, same scale, same palette, each pose fully inside its cell with space between poses: fighting stance, walk, crouch, jump, light punch, heavy punch extended, high kick, special move with glowing energy. Flat solid pure green (#00FF00) background, no shadows on the background, no text, no borders. Character: NYXA, an agile female shadow-ninja alien assassin, dark indigo skin, glowing magenta eyes, long white hair in a high ponytail, black and violet ninja wraps with glowing pink runes, twin crescent energy blades on her forearms, low crouched ninja stance, special move: glowing pink crescent shuriken.",
+  "1536x1024"
+ ],
+ [
+  "brutok_sheet",
+  "Original 2D fighting game character sprite sheet in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, The Last Blade): hand-drawn pixel-art look, strong dark outlines, cel shading with 4-5 tones per material, dynamic anatomy. Show 8 full-body poses of the SAME character facing RIGHT, evenly spaced in a 4x2 grid, same scale, same palette, each pose fully inside its cell with space between poses: fighting stance, walk, crouch, jump, light punch, heavy punch extended, high kick, special move with glowing energy. Flat solid pure green (#00FF00) background, no shadows on the background, no text, no borders. Character: BRUTOK, a huge four-armed ape-like alien gladiator, crimson red fur, grey leathery face with tusks, bronze gladiator shoulder armor and a studded belt with chains, two pairs of massive muscular arms, battle scars, wide wrestler stance, special move: orange ground shockwave from slamming the floor.",
+  "1536x1024"
+ ],
+ [
+  "koral_sheet",
+  "Original 2D fighting game character sprite sheet in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, The Last Blade): hand-drawn pixel-art look, strong dark outlines, cel shading with 4-5 tones per material, dynamic anatomy. Show 8 full-body poses of the SAME character facing RIGHT, evenly spaced in a 4x2 grid, same scale, same palette, each pose fully inside its cell with space between poses: fighting stance, walk, crouch, jump, light punch, heavy punch extended, high kick, special move with glowing energy. Flat solid pure magenta (#FF00FF) background, no shadows on the background, no text, no borders. Character: KORAL, an amphibious ocean alien warrior woman, sleek blue-green scales, fin crest on the head and fins on the forearms, glowing cyan bioluminescent spots, large dark eyes, white coral and pearl armor, wielding a golden trident, agile spear stance, special move: cresting water wave thrown from the trident.",
+  "1536x1024"
+ ],
+ [
+  "stages/krell",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: a neon alien spaceport bounty market at night: battered starships docked on landing pads, holographic wanted posters and glowing orange and cyan signs, steam vents, a rowdy crowd of alien mercenaries and gamblers behind a metal barricade, light rain, huge planet on the horizon. The floor is a worn metal landing pad with yellow hazard stripes and puddles reflecting neon. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "stages/nyxa",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: rooftops of an alien pagoda city under two huge moons at night: curved tiled roofs, glowing pink paper lanterns on strings, crystal trees with violet leaves drifting in the wind, masked ninja clan spectators watching from balconies and roof ridges, distant towers. The floor is a wide flat wooden rooftop terrace with red lacquered railings. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "stages/brutok",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: a jungle gladiator pit colosseum on a wild alien planet at sunset: colossal alien trees and hanging vines, crumbling stone tiers packed with a tribal alien crowd waving torches and spears, giant war drums, banners of beast skulls, orange sky with two suns. The floor is packed red dirt and sand with scattered bones and stone tiles. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "stages/koral",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: an underwater dome city on an ocean planet: a huge glass dome with giant whale-like alien creatures and schools of glowing fish swimming outside, coral towers and pearl spires, bioluminescent jellyfish lights, a crowd of fish-folk aliens behind a pearl and coral railing, god rays from above. The floor is smooth mother-of-pearl tiles with shallow water reflections. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "story/intro1",
+  "Cinematic intro illustration for an original 1990s arcade fighting game about alien warriors, late-90s SNK Neo Geo attract-mode style (Garou: Mark of the Wolves intro), hand-drawn pixel-art look, dramatic lighting, rich colors, wide shot, no text, no UI, no borders. Scene: deep space, a colossal black and gold alien mothership shaped like a three-eyed skull eclipsing a blue ocean planet, violet energy beams draining the planet, fleets of smaller warships around it, nebula behind",
+  "1536x1024"
+ ],
+ [
+  "story/intro2",
+  "Cinematic intro illustration for an original 1990s arcade fighting game about alien warriors, late-90s SNK Neo Geo attract-mode style (Garou: Mark of the Wolves intro), hand-drawn pixel-art look, dramatic lighting, rich colors, wide shot, no text, no UI, no borders. Scene: XAL THE OVERMIND, a regal cosmic tyrant alien in black and gold ornate armor and crimson cape, exposed glowing violet brain under a crystal dome helmet, three glowing eyes, sitting on a dark throne, holding a glowing hologram of a galaxy in his long fingers, sinister smile, lit from below by violet light",
+  "1536x1024"
+ ],
+ [
+  "story/intro3",
+  "Cinematic intro illustration for an original 1990s arcade fighting game about alien warriors, late-90s SNK Neo Geo attract-mode style (Garou: Mark of the Wolves intro), hand-drawn pixel-art look, dramatic lighting, rich colors, wide shot, no text, no UI, no borders. Scene: a giant holographic broadcast of a three-eyed alien skull emblem announcing a galactic tournament, projected in the sky above alien cities on different planets, huge crowds of diverse aliens looking up in awe",
+  "1536x1024"
+ ],
+ [
+  "story/intro4",
+  "Cinematic intro illustration for an original 1990s arcade fighting game about alien warriors, late-90s SNK Neo Geo attract-mode style (Garou: Mark of the Wolves intro), hand-drawn pixel-art look, dramatic lighting, rich colors, wide shot, no text, no UI, no borders. Scene: eight alien warriors seen from behind as silhouettes with strong rim light, standing on a platform before a colossal floating coliseum arena in space: a horned reptile with tail, a slender psychic woman with a big cranium, a winged mantis with blades, a huge rock golem, a cyborg with an arm cannon, a ninja woman with a ponytail, a four-armed ape gladiator, an amphibian woman with a trident",
+  "1536x1024"
+ ],
+ [
+  "screens/title_bg2",
+  "Title screen background art for an original 1990s arcade fighting game about alien warriors, late-90s SNK Neo Geo style, hand-drawn pixel-art look: a colossal alien coliseum arena floating in space under a violet cosmic sky with a ringed planet and nebula, dramatic god rays, a sinister black and gold three-eyed skull mothership looming above, epic scale. Leave the upper-middle third fairly dark and simple for a logo. No characters, no text.",
+  "1536x1024"
+ ]
+]

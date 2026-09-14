@@ -1,0 +1,77 @@
+[
+ [
+  "stages/zyra",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: a floating psychic crystal sanctuary in deep space: giant levitating cyan and magenta crystals, a spiral galaxy and nebula in the starry sky, an ancient white and silver alien temple with glowing cyan glyphs, rows of hooded psychic alien monks watching from balconies behind a low ornate railing, floating orbs of light. The floor is polished white stone with glowing cyan circuit lines and reflections. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "stages/ossk",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: an underground alien insect hive cavern: organic amber resin walls, honeycomb structures, glowing orange eggs and bioluminescent fungus, a swarm crowd of insectoid aliens clinging to the cavern walls and ledges behind a bone fence, dripping resin, shafts of light from cracks in the ceiling. The floor is hardened amber resin with embedded fossils and puddles. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "stages/grumm",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: a volcanic crystal mine on a molten planet: rivers of glowing lava, huge blue crystal formations, a crowd of rock creatures and miner aliens on scaffolding and mine carts behind a rusted metal barrier, erupting volcano and red smoky sky, sparks and embers. The floor is cracked dark basalt with glowing orange lava veins. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "stages/xal",
+  "Original 2D fighting game stage background in the style of late-90s SNK Neo Geo games (Garou: Mark of the Wolves, Samurai Shodown, KOF 98): hand-drawn pixel-art look, rich detail, dramatic lighting, side view, wide panoramic composition, flat orthographic camera looking straight ahead at eye level. Keep the upper part of the image (sky, ceiling) simple and uniform across the width so it can scroll separately. Scene: the throne hall of an evil cosmic overlord aboard a giant alien mothership: black and gold ornate architecture, a giant window showing a burning planet and a fleet of ships, violet energy pillars, rows of armored alien guards standing at attention behind a gold balustrade, hanging crimson banners with a three-eyed emblem, a dark throne in the distance. The floor is polished black obsidian with gold inlays reflecting violet light. The fighting floor is a wide flat surface occupying the bottom quarter of the image, running across the whole width. No characters in the foreground, no text, no UI, no borders.",
+  "1536x1024"
+ ],
+ [
+  "screens/portrait_vorax",
+  "Original character portrait artwork for a late-90s SNK Neo Geo fighting game VS screen (Garou: Mark of the Wolves, KOF 98 style): hand-drawn pixel-art look, dramatic rim lighting, strong dark outlines, cel shading, intense expression, upper body from the waist up, three-quarter view facing RIGHT, filling the frame. Character: VORAX, a towering reptilian alien warrior, green-teal scales, bone-white horns swept back, glowing yellow eyes, purple and gold tribal armor on shoulders, claws raised, roaring. Flat solid pure magenta (#FF00FF) background, no text, no border.",
+  "1024x1536"
+ ],
+ [
+  "screens/portrait_zyra",
+  "Original character portrait artwork for a late-90s SNK Neo Geo fighting game VS screen (Garou: Mark of the Wolves, KOF 98 style): hand-drawn pixel-art look, dramatic rim lighting, strong dark outlines, cel shading, intense expression, upper body from the waist up, three-quarter view facing RIGHT, filling the frame. Character: ZYRA, a slender female psychic alien, pale lavender-blue skin, large elongated cranium with glowing cyan markings, big black almond eyes, flowing tentacle-like hair, magenta and silver bodysuit, cyan psychic energy crackling around one raised hand. Flat solid pure green (#00FF00) background, no text, no border.",
+  "1024x1536"
+ ],
+ [
+  "screens/portrait_ossk",
+  "Original character portrait artwork for a late-90s SNK Neo Geo fighting game VS screen (Garou: Mark of the Wolves, KOF 98 style): hand-drawn pixel-art look, dramatic rim lighting, strong dark outlines, cel shading, intense expression, upper body from the waist up, three-quarter view facing RIGHT, filling the frame. Character: OSSK, an insectoid mantis alien assassin, amber and dark brown chitin armor, scythe blades raised, compound red eyes, translucent wings spread behind. Flat solid pure magenta (#FF00FF) background, no text, no border.",
+  "1024x1536"
+ ],
+ [
+  "screens/portrait_grumm",
+  "Original character portrait artwork for a late-90s SNK Neo Geo fighting game VS screen (Garou: Mark of the Wolves, KOF 98 style): hand-drawn pixel-art look, dramatic rim lighting, strong dark outlines, cel shading, intense expression, upper body from the waist up, three-quarter view facing RIGHT, filling the frame. Character: GRUMM, a massive rock golem alien, dark basalt body with glowing orange lava cracks, huge fist in the foreground, blue crystal shards on shoulders, small glowing eyes. Flat solid pure magenta (#FF00FF) background, no text, no border.",
+  "1024x1536"
+ ],
+ [
+  "screens/portrait_xal",
+  "Original character portrait artwork for a late-90s SNK Neo Geo fighting game VS screen (Garou: Mark of the Wolves, KOF 98 style): hand-drawn pixel-art look, dramatic rim lighting, strong dark outlines, cel shading, intense expression, upper body from the waist up, three-quarter view facing RIGHT, filling the frame. Character: XAL THE OVERMIND, a regal cosmic tyrant alien, black and gold ornate armor, crimson cape, exposed glowing violet brain under a crystal dome helmet, three glowing eyes, violet lightning in his long fingers, menacing smile. Flat solid pure green (#00FF00) background, no text, no border.",
+  "1024x1536"
+ ],
+ [
+  "screens/logo",
+  "Title logo for an original 1990s arcade fighting game named XENO FIGHTERS, in the style of late-90s SNK Neo Geo game logos: huge bold chunky metallic 3D letters with sharp alien bevels, chrome and purple-to-cyan gradient, glowing green energy cracks, spikes, an alien skull emblem between the words, heavy black outline, dramatic lens flare. The text must read exactly: XENO FIGHTERS. Centered, wide, on a flat solid pure black (#000000) background, nothing else.",
+  "1536x1024"
+ ],
+ [
+  "screens/title_bg",
+  "Title screen background art for an original 1990s arcade fighting game about alien warriors, late-90s SNK Neo Geo style, hand-drawn pixel-art look: a colossal alien coliseum arena under a violet cosmic sky with a ringed planet and nebula, dramatic god rays, silhouettes of four different alien fighters (a horned reptile, a big-headed psychic woman, a winged mantis, a rock golem) standing on a cliff edge seen from behind, epic scale. Leave the upper-middle third fairly dark and simple for a logo. No text.",
+  "1536x1024"
+ ],
+ [
+  "screens/words0",
+  "Arcade fighting game announcement lettering in the style of late-90s SNK Neo Geo games (KOF 98, Garou): huge bold italic chunky letters with thick black outline, fiery gold-to-red gradient with white highlights and a slight 3D bevel. Three separate words stacked vertically with lots of empty space between them, each centered on its own horizontal band (top third, middle third, bottom third). Top: \"ROUND 1\". Middle: \"ROUND 2\". Bottom: \"FINAL ROUND\". Spelling must be exact. Flat solid pure black (#000000) background, nothing else.",
+  "1024x1536"
+ ],
+ [
+  "screens/words1",
+  "Arcade fighting game announcement lettering in the style of late-90s SNK Neo Geo games (KOF 98, Garou): huge bold italic chunky letters with thick black outline, fiery gold-to-red gradient with white highlights and a slight 3D bevel. Three separate words stacked vertically with lots of empty space between them, each centered on its own horizontal band (top third, middle third, bottom third). Top: \"FIGHT!\". Middle: \"K.O.\". Bottom: \"PERFECT\". Spelling must be exact. Flat solid pure black (#000000) background, nothing else.",
+  "1024x1536"
+ ],
+ [
+  "screens/words2",
+  "Arcade fighting game announcement lettering in the style of late-90s SNK Neo Geo games (KOF 98, Garou): huge bold italic chunky letters with thick black outline, fiery gold-to-red gradient with white highlights and a slight 3D bevel. Three separate words stacked vertically with lots of empty space between them, each centered on its own horizontal band (top third, middle third, bottom third). Top: \"TIME OVER\". Middle: \"YOU WIN\". Bottom: \"YOU LOSE\". Spelling must be exact. Flat solid pure black (#000000) background, nothing else.",
+  "1024x1536"
+ ],
+ [
+  "screens/words3",
+  "Arcade fighting game announcement lettering in the style of late-90s SNK Neo Geo games (KOF 98, Garou): huge bold italic chunky letters with thick black outline, fiery gold-to-red gradient with white highlights and a slight 3D bevel. Three separate words stacked vertically with lots of empty space between them, each centered on its own horizontal band (top third, middle third, bottom third). Top: \"DRAW GAME\". Middle: \"CONTINUE?\". Bottom: \"GAME OVER\". Spelling must be exact. Flat solid pure black (#000000) background, nothing else.",
+  "1024x1536"
+ ]
+]

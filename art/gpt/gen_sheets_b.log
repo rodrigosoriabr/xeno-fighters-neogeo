@@ -1,0 +1,36 @@
+s1_idle_walk -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s1_idle_walk.png {'input
+s2_move -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s2_move.png {'input_toke
+s3_punch -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s3_punch.png {'input_tok
+s4_kick -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s4_kick.png {'input_toke
+s5_crouch_attacks -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s5_crouch_attacks.png {'
+s6_air_hit -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s6_air_hit.png {'input_t
+s7_knockdown -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s7_knockdown.png {'input
+s8_specials -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s8_specials.png {'input_
+s9_super_win -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/brutok/s9_super_win.png {'input
+s1_idle_walk -> exists
+s2_move -> exists
+s3_punch -> exists
+s4_kick -> exists
+s5_crouch_attacks -> exists
+s6_air_hit -> exists
+s7_knockdown -> exists
+s8_specials -> exists
+s9_super_win -> exists
+s1_idle_walk -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s1_idle_walk.png {'input_
+s2_move -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s2_move.png {'input_token
+s3_punch -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s3_punch.png {'input_toke
+s4_kick -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s4_kick.png {'input_token
+s5_crouch_attacks -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s5_crouch_attacks.png {'i
+s6_air_hit -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s6_air_hit.png {'input_to
+s7_knockdown -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s7_knockdown.png {'input_
+s8_specials -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s8_specials.png {'input_t
+s9_super_win -> /Users/rodrigosoria/neodev/xeno-fighters/art/gpt/koral/s9_super_win.png {'input_
+s1_idle_walk -> exists
+s2_move -> exists
+s3_punch -> exists
+s4_kick -> exists
+s5_crouch_attacks -> exists
+s6_air_hit -> exists
+s7_knockdown -> exists
+s8_specials -> exists
+s9_super_win -> exists
