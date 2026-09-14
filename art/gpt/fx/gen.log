@@ -1,0 +1,4 @@
+art/gpt/fx/sparks.png {'input_tokens': 185, 'input_tokens_details': {'image_tokens': 0, 'text_tokens': 185}, 'output_tokens': 5488, 'output_tokens_details': {'image_tokens': 5488, 'text_tokens': 0}, 'total_tokens': 5673}
+art/gpt/fx/misc.png {'input_tokens': 153, 'input_tokens_details': {'image_tokens': 0, 'text_tokens': 153}, 'output_tokens': 5488, 'output_tokens_details': {'image_tokens': 5488, 'text_tokens': 0}, 'total_tokens': 5641}
+art/gpt/fx/projectiles.png {'input_tokens': 172, 'input_tokens_details': {'image_tokens': 0, 'text_tokens': 172}, 'output_tokens': 5488, 'output_tokens_details': {'image_tokens': 5488, 'text_tokens': 0}, 'total_tokens': 5660}
+art/gpt/fx/super.png {'input_tokens': 151, 'input_tokens_details': {'image_tokens': 0, 'text_tokens': 151}, 'output_tokens': 5488, 'output_tokens_details': {'image_tokens': 5488, 'text_tokens': 0}, 'total_tokens': 5639}
