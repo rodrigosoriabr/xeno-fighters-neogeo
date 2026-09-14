@@ -161,6 +161,9 @@ def main():
         images.append(Image16(f"icon_{c}", icons, 4))
     names = [ui.plate(c.upper(), 12) for c in CHARACTERS] + [ui.plate(c.upper(), 24) for c in CHARACTERS]
     names.append(ui.plate("VS", 40, top=(255, 255, 255), mid=(255, 80, 60), bottom=(120, 0, 40), italic=0.1))
+    # screen titles as lettering sprites: the tall fix font in the gold timer palette read broken (14/09)
+    names.append(ui.plate("SELECT YOUR FIGHTER", 13))
+    names.append(ui.plate("GAME OPTIONS", 18))
     images.append(Image16("names", names, 3))
     images.append(Image16("hud", [ui.lifebar_frame(), ui.timer_shield(), ui.power_frame(), ui.select_cursor(), ui.text_band(), ui.shadow()], 4))
     parts = []
@@ -198,7 +201,7 @@ def main():
     lines.append("#define IMG_ICON(c) (IMG_ICON_VORAX + (c))")
     lines.append("#define IMG_END(c) (IMG_END_VORAX + (c))")
     lines.append("#define IMG_STORY(n) (IMG_STORY_INTRO1 + (n))")
-    lines.append(f"enum {{ NAME_SMALL = 0, NAME_BIG = {len(CHARACTERS)}, NAME_VS = {2 * len(CHARACTERS)} }};")
+    lines.append(f"enum {{ NAME_SMALL = 0, NAME_BIG = {len(CHARACTERS)}, NAME_VS = {2 * len(CHARACTERS)}, NAME_TITLE_SELECT, NAME_TITLE_OPTIONS }};")
     lines.append("enum { HUD_LIFEBAR, HUD_TIMER, HUD_POWER, HUD_CURSOR, HUD_TEXT_BAND, HUD_SHADOW };")
     lines.append("enum { " + ", ".join("WORD_" + w.replace(" ", "_").replace("!", "").replace(".", "").replace("?", "") for w in word_ids) + " };")
     lines.append("#endif")

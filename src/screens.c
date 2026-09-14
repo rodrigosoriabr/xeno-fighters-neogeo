@@ -225,10 +225,10 @@ void options_screen(u8 player) {
     dim_image(IMG_TITLE_BG, 4);
     u8 row = 0, done = 0;
     u16 t = 0;
-    ng_center_text_tall(5, 2, "GAME OPTIONS");
     while (!done) {
         frame();
         screen_show(BLOCK_BG, 20, IMG_TITLE_BG, 0, 0, 0, 0);
+        screen_show(BLOCK_WORD, 16, IMG_NAMES, NAME_TITLE_OPTIONS, (SCREEN_W - frame_width(IMG_NAMES, NAME_TITLE_OPTIONS)) / 2, 22, 0);
         u8 change = player ? bios_p2change : bios_p1change;
         if (change & (CNT_UP | CNT_DOWN)) {
             row = (u8)((row + ((change & CNT_DOWN) ? 1 : 2)) % 3);
@@ -313,7 +313,6 @@ u8 select_screen(u8 player) {
             clear_rows(10, 16);
             fix_text(20, 11, 5, epithet[cursor]);
             for (u8 l = 0; l < 3; l++) fix_text(20, (u8)(13 + l), 0, bio[cursor][l]);
-            ng_center_text_tall(2, 2, "SELECT YOUR FIGHTER");
             ng_text_tall(1, 26, 6, player ? "2P" : "1P");
             shown = cursor;
         }
@@ -321,6 +320,7 @@ u8 select_screen(u8 player) {
         s16 slide = t - moved_at < 8 ? (8 - (s16)(t - moved_at)) * 12 : 0;
         draw_frame(BLOCK_A, 12, &screen_images, screen_image[IMG_PORTRAIT(cursor)].frame + 1, 2 - slide, -8, 0, SLOT_BUST);
         screen_show(BLOCK_NAME, 8, IMG_NAMES, NAME_BIG + cursor, 158 + slide / 2, 34, 0);
+        screen_show(BLOCK_WORD, 16, IMG_NAMES, NAME_TITLE_SELECT, (SCREEN_W - frame_width(IMG_NAMES, NAME_TITLE_SELECT)) / 2, 4, 0);
         for (u8 i = 0; i < PLAYABLE_COUNT; i++) {
             s16 bump = (i == cursor && chosen == 255) ? (s16)((t >> 4) & 1) * 2 : 0;
             draw_frame(BLOCK_ICONS + i * 3, 3, &screen_images, screen_image[IMG_ICON(i)].frame, icon_x(i), icon_y(i) - bump, 0, ICON_SLOT(i));
