@@ -26,6 +26,10 @@ KEYS = {"vorax": (255, 0, 255), "zyra": (0, 255, 0), "ossk": (255, 0, 255), "gru
         "krell": (255, 0, 255), "nyxa": (0, 255, 0), "brutok": (0, 255, 0), "koral": (255, 0, 255)}
 WORDS = [["ROUND 1", "ROUND 2", "FINAL ROUND"], ["FIGHT!", "K.O.", "PERFECT"], ["TIME OVER", "YOU WIN", "YOU LOSE"],
          ["DRAW GAME", "CONTINUE?", "GAME OVER"], ["FIRST ATTACK", "COUNTER", "REVERSAL"], ["WARNING", "NEW CHALLENGER", "THE END"]]
+# icon crop: face center x, y and square side, in units of a 400 px wide portrait
+FACE = {"vorax": (285, 150, 230), "zyra": (255, 185, 210), "ossk": (272, 190, 170), "grumm": (262, 105, 165),
+        "krell": (250, 118, 150), "nyxa": (200, 115, 165), "brutok": (248, 100, 170), "koral": (238, 105, 180),
+        "xal": (195, 135, 225)}
 STORY = ["intro1", "intro2", "intro3", "intro4"]
 
 
@@ -145,12 +149,12 @@ def main():
     for c in CHARACTERS:
         path = art(f"screens/portrait_{c}.png", "screens/portrait_vorax.png")
         rgb, alpha = rgba(path, KEYS[c] if os.path.exists(os.path.join(ART, f"screens/portrait_{c}.png")) else KEYS["vorax"])
-        # square around the head: from the top of the figure, centered on the mass of that band
-        side = int(rgb.shape[1] * 0.5)
-        rows = np.nonzero((alpha > 0.5).any(axis=1))[0]
-        y0 = max(0, rows[0] - side // 12)
-        cx = int(np.nonzero(alpha[y0:y0 + side] > 0.5)[1].mean())
-        x0 = min(max(0, cx - side // 2), rgb.shape[1] - side)
+        # square around the face, picked by eye per portrait (the old "top of the figure" crop showed hair,
+        # horns and crystals instead of faces, 15/09/2026)
+        fx, fy, fs = [int(v * rgb.shape[1] / 400) for v in FACE[c]]
+        side = fs
+        x0 = min(max(0, fx - side // 2), rgb.shape[1] - side)
+        y0 = min(max(0, fy - side // 2), rgb.shape[0] - side)
         face = (rgb[y0:y0 + side, x0:x0 + side], alpha[y0:y0 + side, x0:x0 + side])
         icons = []
         for size in (48, 32):

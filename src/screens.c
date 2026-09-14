@@ -307,7 +307,7 @@ u8 select_screen(u8 player) {
         if (shown != cursor) {
             screen_load(IMG_PORTRAIT(cursor), SLOT_BUST);
             for (u8 i = 0; i < PLAYABLE_COUNT; i++) {
-                if (i != cursor) fade_palettes(ICON_SLOT(i), screen_palettes + screen_image[IMG_ICON(i)].palette * 16, 4, 8);
+                if (i != cursor) fade_palettes(ICON_SLOT(i), screen_palettes + screen_image[IMG_ICON(i)].palette * 16, 4, 11);
                 else set_palettes(ICON_SLOT(i), screen_palettes + screen_image[IMG_ICON(i)].palette * 16, 4);
             }
             clear_rows(10, 16);
