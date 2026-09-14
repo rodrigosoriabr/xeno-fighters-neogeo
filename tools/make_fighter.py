@@ -33,6 +33,7 @@ ANIM_ORDER = ["idle", "walk", "crouch_down", "crouch", "jump_takeoff", "jump_up"
 def load_sheet(name, sheet, key):
     rgb = np.asarray(Image.open(os.path.join(ROOT, "art", "gpt", name, sheet + ".png")).convert("RGB"))
     alpha = g.key_alpha(rgb, KEYS[key])
+    rgb = g.despill(rgb, alpha, KEYS[key])
     return rgb, alpha, g.components(alpha)
 
 

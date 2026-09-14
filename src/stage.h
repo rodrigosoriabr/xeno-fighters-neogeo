@@ -13,6 +13,8 @@ typedef struct {
     s16 y;             /* top of the band in stage pixels */
 } Band;
 
+#define NO_CROWD 255
+
 enum { MOTION_DRIFT, MOTION_RISE, MOTION_FALL, MOTION_TWINKLE };
 
 typedef struct {
@@ -23,7 +25,8 @@ typedef struct {
     s16 ground;        /* stage pixel row of the fighters' floor line */
     Band bands[3];
     u16 backdrop;
-    u8 crowd;          /* spectator set (crowd_data.h), in stage order */
+    u8 crowd;          /* spectator set (crowd_data.h), in stage order; NO_CROWD = none */
+    s16 crowd_feet;    /* stage row the spectators stand on: the base of the painted barrier */
     u8 particle;       /* FXA_P_* */
     u8 motion;         /* MOTION_* */
     const u16 *glow;   /* palette entries (palette * 16 + color) that pulse */

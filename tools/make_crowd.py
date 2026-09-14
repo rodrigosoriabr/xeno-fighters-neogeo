@@ -7,7 +7,7 @@ spectators watching (row 1) and the same four cheering (row 2), so frame 4 + k i
 Writes build/res/crowd_data.h (one image set for all stages, 8 frames and 8 palettes per stage, in
 STAGES order) and build/res/crowd.tiles.npy. Spectators are scaled to HEIGHT px, feet on the frame
 bottom, x centered."""
-import os, sys
+import json, os, sys
 import numpy as np
 from PIL import Image
 
@@ -18,6 +18,17 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STAGES = ["temple", "sanctuary", "hive", "mine", "spaceport", "rooftops", "colosseum", "dome", "throne"]
 HEIGHT = 46
 PALETTES = 8
+# spectators are far away: their colors are pulled toward the painting's middle band, otherwise their
+# flat saturated colors read as toys pasted on the stage (mine and dome, 14/09/2026)
+DEPTH_TINT = 0.35
+
+
+def stage_tint(stage):
+    spec = json.load(open(os.path.join(ROOT, "data", f"stage_{stage}.json")))
+    src = Image.open(os.path.join(ROOT, "art", "gpt", spec["image"])).convert("RGB")
+    y0, y1, _ = spec["bands"][1]
+    rgb = np.asarray(src.resize((round(src.width * spec["scale"]), round(src.height * spec["scale"])))).astype(np.float64)
+    return rgb[y0:y1].reshape(-1, 3).mean(0)
 
 
 def cell(rgb, alpha, index):
@@ -39,6 +50,7 @@ def main():
         corner = rgb[4, 4]
         key = (255, 0, 255) if corner[0] > 128 else (0, 255, 0)
         alpha = g.key_alpha(rgb, key)
+        rgb = g.despill(rgb, alpha, key)
         figs = [cell(rgb, alpha, i) for i in range(8)]
         # one scale per spectator so the watching and cheering poses match (the cheer is taller: arms up)
         frames = []
@@ -60,6 +72,7 @@ def main():
                     if (a > 0.5).any():
                         tiles.append((fi, r, c, R[r * 16:(r + 1) * 16, c * 16:(c + 1) * 16][a > 0.5]))
         palettes, assign = g.build_palettes([t[3] for t in tiles], PALETTES, rounds=3)
+        tint = stage_tint(stage)
         grids = [np.zeros((rows, cols, 2), np.int32) for _, _, rows, cols in frames]
         for (fi, r, c, _), p in zip(tiles, assign):
             R, A = frames[fi][:2]
@@ -72,7 +85,7 @@ def main():
                 for r in range(rows):
                     cells_out.append(int(grid[r, c, 0])); attrs_out.append(int(grid[r, c, 1]))
         for pal in palettes:
-            palette_words += [0x8000] + [g.packed15(col) for col in pal] + [0] * (15 - len(pal))
+            palette_words += [0x8000] + [g.packed15(np.asarray(col) * (1 - DEPTH_TINT) + tint * DEPTH_TINT) for col in pal] + [0] * (15 - len(pal))
         while len(palette_words) % (PALETTES * 16):
             palette_words += [0x8000] + [0] * 15
     out = os.path.join(ROOT, "build", "res")

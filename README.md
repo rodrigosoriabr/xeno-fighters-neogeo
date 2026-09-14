@@ -13,6 +13,7 @@ make                            # assets that changed + ROM in build/rom
 make run                        # MAME with the real BIOS
 python3 tools/package.py        # .neocart for Arcade Nostalgia
 make EXTRA=-DSCREEN_TEST        # build that walks every screen (test/screen_test.lua)
+make EXTRA=-DSTAGE_TEST         # 10 s of CPU fight on each stage (test/stage_test.lua)
 ~/neodev/mame-run.sh . 60 $PWD/test/soak.lua real   # headless: random input, logs stuck states
 ```
 

@@ -1,1 +1,1 @@
-{"image": "stages/ossk.png", "scale": 0.36, "width": 528, "bands": [[0, 112, 11], [112, 256, 11], [256, 368, 16]], "ground": 300, "palettes": 16, "particle": "P_FIREFLY", "motion": "drift", "crowd": 2}
+{"image": "stages/ossk.png", "scale": 0.36, "width": 528, "bands": [[0, 112, 11], [112, 256, 11], [256, 368, 16]], "ground": 300, "palettes": 16, "particle": "P_FIREFLY", "motion": "drift", "crowd": 2, "crowd_feet": 256}

@@ -1,1 +1,1 @@
-{"image": "stage_vorax.png", "scale": 0.36, "width": 528, "bands": [[0, 112, 11], [112, 256, 11], [256, 368, 16]], "ground": 290, "palettes": 16, "particle": "P_FIREFLY", "motion": "drift", "crowd": 0}
+{"image": "stages/vorax.png", "scale": 1.0, "width": 528, "bands": [[0, 112, 11], [112, 256, 11], [256, 368, 16]], "ground": 290, "palettes": 16, "particle": "P_FIREFLY", "motion": "drift", "crowd": 0, "crowd_feet": 256}

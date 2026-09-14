@@ -1,1 +1,1 @@
-{"image": "stages/koral.png", "scale": 0.36, "width": 528, "bands": [[0, 112, 11], [112, 256, 11], [256, 368, 16]], "ground": 300, "palettes": 16, "particle": "P_BUBBLE", "motion": "rise", "crowd": 7}
+{"image": "stages/koral.png", "scale": 0.36, "width": 528, "bands": [[0, 112, 11], [112, 256, 11], [256, 368, 16]], "ground": 300, "palettes": 16, "particle": "P_BUBBLE", "motion": "rise", "crowd": 7, "crowd_feet": 256}

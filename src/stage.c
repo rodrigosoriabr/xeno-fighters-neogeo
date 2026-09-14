@@ -9,8 +9,6 @@
 #define COLUMNS 21
 #define SPECTATORS 12
 #define PARTICLES SPR_PARTICLE_COUNT
-#define CROWD_SPEED 16            /* spectators stand on the far edge of the floor */
-#define CROWD_FEET 32             /* px above the fighters' floor line */
 
 s16 stage_width;
 s16 camera_x, camera_y;
@@ -42,7 +40,7 @@ void stage_load(const Stage *s, u8 unused) {
     stage_width = s->width;
     offset_y = s->ground - GROUND_Y;
     set_palettes(PAL_STAGE, s->palettes, s->palette_count);
-    set_palettes(PAL_CROWD, crowd_palettes + s->crowd * CROWD_PALETTES * 16, CROWD_PALETTES);
+    if (s->crowd != NO_CROWD) set_palettes(PAL_CROWD, crowd_palettes + s->crowd * CROWD_PALETTES * 16, CROWD_PALETTES);
     set_backdrop(s->backdrop);
     for (u8 b = 0; b < 3; b++) first_column[b] = -1;
     camera_x = (s->width - SCREEN_W) / 2;
@@ -117,10 +115,13 @@ void stage_draw(void) {
 void stage_draw_front(s16 cx, s16 cy) {
     if (!stage) return;
     u16 block = SPR_CROWD;
-    s16 feet = stage->ground - CROWD_FEET - offset_y - cy;
-    for (u8 i = 0; i < SPECTATORS && block + 3 <= SPR_CROWD + SPR_CROWD_COUNT; i++) {
+    /* spectators stand at the painted barrier and scroll with the middle band, so they stay glued to it
+     * (on the fight floor they looked like toys next to the fighters) */
+    s16 feet = stage->crowd_feet - offset_y - cy;
+    u8 speed = stage->bands[1].speed;
+    for (u8 i = 0; stage->crowd != NO_CROWD && i < SPECTATORS && block + 3 <= SPR_CROWD + SPR_CROWD_COUNT; i++) {
         Spectator *s = &spectators[i];
-        s16 x = s->x - (s16)((s32)cx * CROWD_SPEED / 16);
+        s16 x = s->x - (s16)((s32)cx * speed / 16);
         if (x < -24 || x > SCREEN_W + 24) continue;
         u8 t = (u8)(frame_count + s->phase);
         u8 cheer = excite && ((t >> 3) & 1);

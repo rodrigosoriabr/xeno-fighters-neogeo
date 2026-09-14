@@ -40,6 +40,7 @@ def rgba(path, key=None, black=False):
         alpha = np.clip((rgb.max(axis=2) - 24) / 60.0, 0, 1)
     elif key:
         alpha = g.key_alpha(rgb, key)
+        rgb = g.despill(rgb, alpha, key)
     else:
         alpha = np.ones(rgb.shape[:2])
     return rgb, alpha

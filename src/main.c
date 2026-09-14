@@ -365,7 +365,25 @@ static void screen_test(void) {
 }
 #endif
 
+#ifdef STAGE_TEST
+/* make EXTRA=-DSTAGE_TEST: 10 s of CPU fight on every stage, in stage order (test/stage_test.lua) */
+static void stage_test(void) {
+    bios_user_mode = 1;
+    demo = 1;
+    for (u8 c = 0; c < CHARACTER_COUNT; c++) {
+        demo_frames = 1200;
+        play_match(c == CHAR_XAL ? CHAR_NYXA : (u8)((c + 1) % PLAYABLE_COUNT), c, 5, 5);
+    }
+    demo = 0;
+    bios_user_mode = 2;
+}
+#endif
+
 static void arcade(void) {
+#ifdef STAGE_TEST
+    stage_test();
+    return;
+#endif
 #ifdef SCREEN_TEST
     screen_test();
     return;

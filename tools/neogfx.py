@@ -16,6 +16,25 @@ def key_alpha(rgb, key, tolerance=110):
     return np.clip((d - tolerance) / 40.0, 0.0, 1.0)
 
 
+def despill(rgb, alpha, key, band=10):
+    """Removes the key color that GPT antialiasing mixed into the figure's outline (pink/green fringe
+    pixels in game). Only a band of `band` source pixels inside the edge is touched, so a magenta blade
+    on a green-keyed fighter keeps its color. Magenta key: min(R,B) above G is spill; green: G above
+    max(R,B)."""
+    from scipy.ndimage import distance_transform_edt
+    near_edge = distance_transform_edt(alpha >= 0.999) <= band
+    out = rgb.astype(np.float64).copy()
+    r, gr, b = out[:, :, 0], out[:, :, 1], out[:, :, 2]
+    if key[1] > key[0]:
+        spill = np.clip(gr - np.maximum(r, b), 0, None)
+        gr -= np.where(near_edge, spill, 0)
+    else:
+        spill = np.clip(np.minimum(r, b) - gr, 0, None)
+        r -= np.where(near_edge, spill, 0)
+        b -= np.where(near_edge, spill, 0)
+    return out
+
+
 def downscale(rgb, alpha, scale):
     """Area-average with premultiplied alpha; returns (rgb float HxWx3, alpha HxW)."""
     h, w = alpha.shape

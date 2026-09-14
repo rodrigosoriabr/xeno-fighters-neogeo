@@ -3,7 +3,8 @@
 
   make_stage.py temple
 
-data/stage_<name>.json: {"image", "scale", "width", "bands": [[y0, y1, speed16], x3], "ground", "palettes"}
+data/stage_<name>.json: {"image", "scale", "width", "bands": [[y0, y1, speed16], x3], "ground", "palettes",
+"crowd" (spectator set, null = none), "crowd_feet" (row of the painted barrier base), "particle", "motion"}
 Band rows are in scaled pixels and must be multiples of 16. A band scrolling at speed s/16 only needs
 320 + (width - 320) * s / 16 pixels, cut from the center of the painting, so far layers stay centered.
 
@@ -83,7 +84,7 @@ def main(name):
              f"const Stage stage_{name} = {{{{stage_{name}_frames, stage_{name}_cells, stage_{name}_attrs, TILE_BASE_STAGE_{name.upper()}}}, "
              f"stage_{name}_palettes, {len(palettes)}, {width}, {bands[-1]['y'] + bands[-1]['rows'] * 16}, {spec['ground']}, "
              "{" + ", ".join(f"{{{i}, {b['speed']}, {b['y']}}}" for i, b in enumerate(bands)) + "}, "
-             f"0x{g.packed15(g.to_neo(top)):04x}, {spec.get('crowd', 0)}, FXA_{spec.get('particle', 'P_STAR')}, {motions[spec.get('motion', 'drift')]}, "
+             f"0x{g.packed15(g.to_neo(top)):04x}, {255 if spec.get('crowd') is None else spec['crowd']}, {spec.get('crowd_feet', spec['ground'] - 32)}, FXA_{spec.get('particle', 'P_STAR')}, {motions[spec.get('motion', 'drift')]}, "
              f"stage_{name}_glow, {len(glow)}}};"]
     open(os.path.join(out_dir, f"stage_{name}.h"), "w").write("\n".join(lines) + "\n")
 
