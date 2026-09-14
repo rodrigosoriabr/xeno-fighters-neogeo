@@ -1,0 +1,70 @@
+{
+  "base": "Using the reference image, draw the SAME character with the exact same design, colors, proportions and pixel-art style, facing RIGHT. Late-90s SNK Neo Geo fighting game sprite style (Garou: Mark of the Wolves): hand-drawn pixel-art look, strong dark outlines, cel shading. Draw exactly 8 full-body frames of an animation sheet in a 4x2 grid (4 columns, 2 rows), read left to right, top row first. Every frame at the SAME scale as the reference stance and on the same ground line for its row, each frame fully inside its own cell with clear space between frames, no overlapping. Flat solid background color {bg}, no shadows on the background, no text, no numbers, no borders, no grid lines. Frames: ",
+  "sheets": {
+    "s1_idle_walk": "1-4: fighting stance idle animation loop with subtle breathing (shoulders and chest rise and fall slightly, 4 frames); 5-8: walking forward cycle (4 frames, alternating legs).",
+    "s2_move": "1: going down into crouch; 2: crouching idle; 3: jump takeoff (knees bent); 4: jumping upward, body stretched; 5: jump apex, legs tucked; 6: falling down, legs extending; 7: forward dash, body leaning low and fast; 8: standing guard, forearms raised to block.",
+    "s3_punch": "1: light jab anticipation; 2: light jab fully extended; 3: jab recovery; 4: heavy punch wind-up, torso twisted back; 5: heavy punch lunging forward; 6: heavy punch full extension with the whole body behind it; 7: heavy punch follow-through; 8: heavy punch recovery back to stance.",
+    "s4_kick": "1: light kick lifting knee; 2: light kick extended at mid height; 3: light kick recovery; 4: heavy roundhouse kick chambering; 5: heavy kick rising; 6: heavy kick fully extended high at head height; 7: heavy kick follow-through spin; 8: heavy kick landing back to stance.",
+    "s5_crouch_attacks": "1: crouching jab chamber; 2: crouching jab extended; 3: crouching short kick chamber; 4: crouching short kick extended low; 5: crouching uppercut start; 6: rising uppercut with arm fully raised; 7: low leg sweep start, one hand on the ground; 8: low sweep fully extended along the ground.",
+    "s6_air_hit": "1: jumping punch chamber in mid-air; 2: jumping punch extended downward-forward in mid-air; 3: jumping kick chamber in mid-air; 4: flying kick fully extended diagonally down in mid-air; 5: hit reaction, head snapped back; 6: heavy hit reaction, body bent backward in pain; 7: crouching hit reaction; 8: crouching guard, blocking low.",
+    "s7_knockdown": "1: knocked off the feet, body flying backward; 2: falling backward horizontally in the air; 3: hitting the ground on the back; 4: lying flat on the ground, knocked out; 5: getting up, on one knee; 6: rising back to feet; 7: throw, grabbing the opponent position with both hands forward (no opponent drawn); 8: throw, tossing forcefully over the shoulder.",
+    "s8_specials": "{special1} {special2}",
+    "s9_super_win": "{super} 7: victory pose, triumphant; 8: victory pose, roaring or taunting."
+  },
+  "characters": {
+    "vorax": {
+      "bg": "pure magenta (#FF00FF)",
+      "special1": "1: special move ACID SPIT charge, gathering glowing green acid energy in the claws; 2: throwing forward; 3: arm extended launching a green acid ball; 4: recovery.",
+      "special2": "5: special move TAIL RISER crouch; 6: jumping uppercut spinning upward with tail whip; 7: at the top of the rising spin; 8: landing.",
+      "super": "1: super move PRIMAL FRENZY roar, green aura flaring; 2: rushing forward, blur lines; 3: claw slash left; 4: claw slash right; 5: huge upward claw uppercut with green energy explosion; 6: landing, aura fading."
+    },
+    "zyra": {
+      "bg": "pure green (#00FF00)",
+      "special1": "1: special move PSI ORB, drawing hands back, cyan energy forming; 2: pushing both palms forward; 3: palms extended releasing a glowing cyan psychic orb; 4: recovery.",
+      "special2": "5: special move SPIRAL ASCENT crouch with cyan glow; 6: rising spinning kick upward wrapped in a cyan spiral; 7: top of the spiral kick, legs extended; 8: floating down gracefully.",
+      "super": "1: super move MIND STORM, levitating with eyes and cranium glowing brightly, tentacle hair floating; 2: arms spread, many small cyan orbs appearing around her; 3: thrusting one palm forward; 4: thrusting the other palm; 5: both palms forward releasing a huge cyan psychic beam blast; 6: landing, glow fading."
+    },
+    "ossk": {
+      "bg": "pure magenta (#FF00FF)",
+      "special1": "1: special move BLADE CYCLONE, crouching with blades crossed; 2: starting to spin forward; 3: spinning horizontally with blades out and red energy trail; 4: recovery.",
+      "special2": "5: special move WING RISE, wings opening, low stance; 6: flying upward diagonally with a rising blade slash; 7: at the top, wings spread wide; 8: landing on the ground.",
+      "super": "1: super move HIVE REAPER, wings buzzing, red eyes glowing, crouched to launch; 2: dashing forward as a blur with red afterimages; 3: blade slash crossing left; 4: blade slash crossing right; 5: huge rising X-shaped double blade slash with red energy; 6: landing with blades lowered."
+    },
+    "grumm": {
+      "bg": "pure magenta (#FF00FF)",
+      "special1": "1: special move CRYSTAL QUAKE, raising both fists high overhead; 2: slamming fists down; 3: fists on the ground with blue crystal shards erupting forward along the ground; 4: rising back up.",
+      "special2": "5: special move MAGMA CHARGE, lowering shoulder, lava cracks glowing brighter; 6: charging forward shoulder first; 7: shoulder tackle impact with orange lava sparks; 8: stopping, recovering.",
+      "super": "1: super move TITAN CRUSH, roaring with lava erupting from cracks; 2: lunging forward with both huge hands open; 3: grabbing and lifting overhead (no opponent drawn, empty hands); 4: leaping up; 5: slamming down with a massive lava and crystal explosion; 6: standing up, steam rising."
+    },
+    "xal": {
+      "bg": "pure green (#00FF00)",
+      "special1": "1: special move VOID BOLT, raising one hand with violet lightning gathering; 2: pulling back; 3: arm thrust forward launching a violet lightning bolt; 4: recovery, cape settling.",
+      "special2": "5: special move PHASE SHIFT, body starting to dissolve into violet particles; 6: half transparent, mostly particles; 7: reforming from particles; 8: reappeared, cape flowing.",
+      "super": "1: super move OVERMIND STORM, levitating, brain dome blazing violet; 2: arms raised, violet storm clouds forming; 3: lightning striking around him; 4: pointing forward; 5: massive violet lightning storm pouring forward; 6: descending, cape flowing."
+    },
+    "krell": {
+      "bg": "pure magenta (#FF00FF)",
+      "special1": "1: special move PLASMA SHOT, raising the arm cannon, orange energy charging; 2: bracing; 3: cannon fired forward launching an orange plasma bolt with a muzzle flash; 4: recoil recovery.",
+      "special2": "5: special move JET KNEE, crouching with back thrusters igniting; 6: rocketing forward with a flying knee, blue jet flames behind; 7: knee impact fully extended; 8: landing recovery.",
+      "super": "1: super move OMEGA BLASTER, planting feet, arm cannon unfolding with a large glowing orange core; 2: aiming, energy lines converging; 3: beginning to fire; 4: firing with recoil; 5: massive orange plasma beam blasting forward; 6: cannon venting steam."
+    },
+    "nyxa": {
+      "bg": "pure green (#00FF00)",
+      "special1": "1: special move MOON SHURIKEN, spinning, gathering pink energy; 2: arm pulled back; 3: arm flung forward throwing a glowing pink crescent shuriken; 4: recovery.",
+      "special2": "5: special move CRESCENT RISE crouch, blades glowing pink; 6: rising somersault kick upward with a pink crescent arc trail; 7: upside down at the top of the flip; 8: landing in a crouch.",
+      "super": "1: super move SHADOW DANCE, crossing blades, body wreathed in dark violet smoke; 2: dashing forward as a shadow blur; 3: slashing left with a pink trail; 4: slashing right; 5: huge upward cross slash with a pink crescent explosion; 6: landing, lowering blades."
+    },
+    "brutok": {
+      "bg": "pure green (#00FF00)",
+      "special1": "1: special move QUAKE SLAM, raising both fists high; 2: hopping slightly; 3: slamming both fists into the ground producing an orange shockwave traveling forward along the ground; 4: rising.",
+      "special2": "5: special move RAGE LARIAT, winding up; 6: spinning with both arms extended; 7: spinning lariat with motion blur; 8: recovering.",
+      "super": "1: super move GORILLA FURY, beating his chest with a red rage aura; 2: lunging forward with arms open to grab (no opponent drawn); 3: pummeling with the left fist; 4: pummeling with the right fist; 5: huge double-fist overhead hammer smash with a shockwave; 6: roaring, standing."
+    },
+    "koral": {
+      "bg": "pure magenta (#FF00FF)",
+      "special1": "1: special move TIDE WAVE, swirling the trident, water forming; 2: pulling back; 3: thrusting the trident forward launching a cresting water wave; 4: recovery.",
+      "special2": "5: special move WHIRLPOOL, crouching with the trident spinning; 6: rising upward inside a spinning water vortex; 7: top of the vortex, trident raised; 8: landing with a water splash.",
+      "super": "1: super move LEVIATHAN CALL, raising the trident, bioluminescent spots blazing; 2: water spiraling around the body; 3: pointing the trident forward; 4: charging; 5: enormous torrent water beam blasting forward; 6: landing, water dripping."
+    }
+  }
+}

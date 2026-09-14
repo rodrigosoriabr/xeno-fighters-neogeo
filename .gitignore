@@ -1,0 +1,11 @@
+# make rebuilds these (C-ROM tiles, headers, ROM zip)
+build/
+# converter previews (make regenerates them)
+preview/
+__pycache__/
+test/*.log
+test/ports.txt
+.DS_Store
+# never commit ROMs
+*.zip
+*.neocart

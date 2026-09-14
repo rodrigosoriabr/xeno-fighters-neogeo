@@ -1,0 +1,1 @@
+{"image": "stages/grumm.png", "scale": 0.36, "width": 528, "bands": [[0, 128, 11], [128, 304, 11], [304, 368, 16]], "ground": 335, "palettes": 16, "particle": "P_EMBER", "motion": "rise", "crowd": 3}
