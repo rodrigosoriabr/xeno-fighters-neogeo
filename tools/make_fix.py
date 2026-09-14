@@ -19,14 +19,16 @@ SIZE = 4096
 
 # Fix palettes (16 colors each). Index 0 transparent.
 PALETTES = {
-    0: ["#000000", "#ffffff", "#101018"],                                   # base font: white + shadow
+    # text palettes (font: 1 = upper half of the letter, 3 = lower half, 2 = outline). 5 and 6 once had a
+    # dark color at index 1, so POWER and the select screen epithets drew dark letters with a light rim.
+    0: ["#000000", "#ffffff", "#000008", "#b8c8e8"],                        # white text
     1: ["#000000", "#08080c", "#fffce0", "#ffe040", "#ffb000", "#e07000",   # lifebar: outline, yellow ramp
         "#ff4040", "#a01010", "#1a1428", "#241c38", "#c8b8e0", "#7a6a9a", "#4a3a68", "#ffffff", "#b04000"],
     2: ["#000000", "#140800", "#fff8c0", "#ffd840", "#e8a010", "#a05808"],  # timer digits: gold
     3: ["#000000", "#060818", "#c8f4ff", "#40c8ff", "#1070e0", "#0c2a60", "#3c3c58", "#9090b8"],  # power
     4: ["#000000", "#060818", "#ffffff", "#ff80ff", "#ff20c0", "#600040", "#3c3c58", "#9090b8"],  # power MAX (cycled)
-    5: ["#000000", "#200000", "#ffe0a0", "#ff6020"],                         # combo text
-    6: ["#000000", "#001018", "#a0f0ff", "#40c0e0"],                         # names
+    5: ["#000000", "#fff4a0", "#200800", "#ff9818"],                         # gold text (highlight, combo)
+    6: ["#000000", "#e8fcff", "#001020", "#40c8ff"],                         # cyan text (POWER, names)
     7: ["#000000", "#08080c", "#ffe0e0", "#ff6060", "#ff2020", "#b00000",   # lifebar in danger (< 25%)
         "#ffffff", "#ffa0a0", "#1a1428", "#241c38", "#c8b8e0", "#7a6a9a", "#4a3a68", "#ffffff", "#700000"],
 }
@@ -146,6 +148,25 @@ add("win_empty", [[{".": 0, "3": 5, "2": 0}[c] for c in row] for row in star])
 # --- solid dark tile (letterbox bands behind story text)
 add("solid", [[2] * 8 for _ in range(8)])
 
+def bolden(glyph):
+    """ngdevkit's font is a 2 px stroke with a shadow only to the right and below, which reads faint on
+    busy art: full dark outline around the letter and a two-tone fill (index 1 top half, 3 bottom)."""
+    h = glyph.shape[0]
+    fill = glyph == 1
+    out = np.where(glyph == 2, 2, 0).astype(np.uint8)
+    for y in range(h):
+        for x in range(8):
+            if not fill[y, x] and fill[max(0, y - 1):y + 2, max(0, x - 1):x + 2].any():
+                out[y, x] = 2
+    out[fill] = 1
+    ys = np.nonzero(fill.any(1))[0]
+    if len(ys):
+        mid = (ys.min() + ys.max() + 1) / 2
+        for y in range(h):
+            out[y][fill[y] & (y >= mid)] = 3
+    return out
+
+
 # --- opaque copy of the ASCII font (32-95): transparent pixels become the band color, so text typed over
 # a letterbox band doesn't let the sprite art behind show through the gaps of every glyph
 base_font = open(sys.argv[1], "rb").read()
@@ -160,12 +181,32 @@ def decode(index):
             i += 1
     return t
 for c in range(32, 96):
-    g_ = decode(c)
+    g_ = bolden(decode(c))
     g_[g_ == 0] = 2
     add(f"opaque_{c}", g_)
 
 # --- output
 base = bytearray(open(sys.argv[1], "rb").read())
+
+
+def load(index):
+    raw = base[index * 32:(index + 1) * 32]
+    t = np.zeros((8, 8), np.uint8)
+    i = 0
+    for xa, xb in ((4, 5), (6, 7), (0, 1), (2, 3)):
+        for y in range(8):
+            t[y][xa] = raw[i] & 15
+            t[y][xb] = raw[i] >> 4
+            i += 1
+    return t
+
+
+for c in range(32, 96):
+    base[c * 32:(c + 1) * 32] = encode(bolden(load(c)))
+    for top in (0x100, 0x300):              # tall font: top half at top + c, bottom half 0x100 further
+        both = bolden(np.vstack([load(top + c), load(top + 0x100 + c)]))
+        base[(top + c) * 32:(top + c + 1) * 32] = encode(both[:8])
+        base[(top + 0x100 + c) * 32:(top + 0x100 + c + 1) * 32] = encode(both[8:])
 rom = base + bytes(SIZE * 32 - len(base))
 for i, t in enumerate(tiles):
     rom[(FIRST + i) * 32:(FIRST + i + 1) * 32] = encode(t)
