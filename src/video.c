@@ -1,5 +1,6 @@
 #include <ngdevkit/neogeo.h>
 #include "video.h"
+#include "tile_bases.h"
 
 #define PALETTE_RAM ((volatile u16 *)0x400000)
 #define BACKDROP ((volatile u16 *)0x401ffe)
@@ -38,6 +39,14 @@ void video_init(void) {
         *REG_VRAMRW = 0x0fff;     /* full size */
     }
     hide_sprites(0, SPR_LAST);
+    /* sprite 0 still shows its tiles on the left edge unless they are transparent: the SNK BIOS clears
+     * them at boot, the open nullbios only does it in LSP_1ST (seen as a dashed column at x 8-15, 15/09) */
+    *REG_VRAMADDR = ADDR_SCB1;
+    *REG_VRAMMOD = 1;
+    for (u16 i = 0; i < 32; i++) {
+        *REG_VRAMRW = TILE_BASE_CROWD;   /* tile 0 of every converted set is empty */
+        *REG_VRAMRW = 0;
+    }
     fix_clear();
 }
 
